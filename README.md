@@ -49,7 +49,7 @@ Assume the item length is X, there would be only n errors, and in every errors t
 ### Time complex
 for is just one loop for visit every items, there would be O(X) complexity
 for heap insert the worst case complex one item insert is lg2(K), so the worst total insert O(n*K*lg2(K))
-the print_error_details function will visit every item and for every item the nlargest complex is O(K*lg(K))
+the print_error_details function will visit every item and for every item the nlargest complex is O(K*lg2(K))
 (There are four step for nlargest function and the complex compute detail you can see the link above)
 So, the print_error_details function complex is O(n*K*lg2(K))
 ### Space complex

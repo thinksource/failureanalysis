@@ -1,6 +1,8 @@
 import json
 import heapq as hq
-from dateutil import parser       
+from dateutil import parser
+
+
 class ErrorCollection(object):
     '''
     The error structure:

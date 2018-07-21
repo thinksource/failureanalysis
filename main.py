@@ -1,4 +1,5 @@
 from FailureCount import ErrorCollection
+
 if __name__ == '__main__':
     filename = "log-data.json"
     example = ErrorCollection(filename)
