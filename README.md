@@ -34,12 +34,12 @@ failure:
 }
 ```
 ## Assumption:
-1, the response code over 400 is indicate there is an error
-2, every item has special column 'time' for time string and it can parse to timestamp 
-3, every item has msg column to give error message or response
-4, every item has component to indicate which module running
-5, if the trace_id is same, it will regard as same error
-6, if the trace_id is the same the later one is cause by the early errors, which means the later error will output at first.
+1. the response code over 400 is indicate there is an error
+2. every item has special column 'time' for time string and it can parse to timestamp 
+3. every item has msg column to give error message or response
+4. every item has component to indicate which module running
+5. if the trace_id is same, it will regard as same error
+6. if the trace_id is the same the later one is cause by the early errors, which means the later error will output at first.
 
 ## complex analysis
 
