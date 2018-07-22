@@ -46,14 +46,14 @@ failure:
 
 (https://github.com/python/cpython/blob/3.6/Lib/heapq.py)
 
-Assume the item length is X, there would be only n errors, and in every errors the arraay length is K
+Assume the item length is X, there would be only n errors, and in every error trace the list item length is K
 ### Time complex
 for is just one loop for visit every items, there would be O(X) complexity
 for heap insert the worst case complex one item insert is lg2(K), so the worst total insert O(n*K*lg2(K))
-the print_error_details function will visit every item and for every item the nlargest complex is O(K*lg2(K))
-(There are four step for nlargest function and the complex compute detail you can see the link above)
-So, the print_error_details function complex is O(n*K*lg2(K))
+the print_error_details function will visit every item and for every item the nlargest complex is O(lg2(K))
+
+the print_error_details function complex is O(n*K)
 ### Space complex
-The json analysis need space X, the errors store need space n. So, the complex space is O(X)+O(n)
+The json analysis need space X, the errors store need space n. So, the complex space is O(X)+O(n*K)
 
 

@@ -1,5 +1,6 @@
 import json
 import heapq as hq
+import bisect
 from dateutil import parser
 
 
@@ -25,8 +26,8 @@ class FailureCollection(object):
                 dtime=parser.parse(d['time'])
                 # heaq is ordered so after heap push it will keep order by dtime
                 # (time, msg, component) is the structure for store every error
-                # the value is of self.errors is the heap queue of stored error structure
-                hq.heappush(self.errors[d["trace_id"]],(dtime, d['msg'], d['component']))
+                # the value is of self.errors is the stored list error structure
+                bisect.insort(self.errors[d["trace_id"]],(dtime, d['msg'], d['component']))
         return self.errors
 
     def get_error_count(self):
@@ -38,7 +39,7 @@ class FailureCollection(object):
             re = "trace_id : {}".format(key) + "\n"
             # as time reverse for output the largest timestamp first
             tmp=""
-            for e in hq.nlargest(len(value),value):
+            for e in reversed(value):
                 tmp += cause + e[1] + "; in component " + e[2] + ";"
             print(re+ tmp[len(cause):-1])
                 
