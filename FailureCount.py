@@ -24,7 +24,6 @@ class FailureCollection(object):
                 if d["trace_id"] not in self.errors:
                     self.errors[d["trace_id"]] = []
                 dtime=parser.parse(d['time'])
-                # heaq is ordered so after heap push it will keep order by dtime
                 # (time, msg, component) is the structure for store every error
                 # the value is of self.errors is the stored list error structure
                 bisect.insort(self.errors[d["trace_id"]],(dtime, d['msg'], d['component']))
