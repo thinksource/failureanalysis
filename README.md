@@ -44,7 +44,7 @@ failure:
 
 ## complex analysis
 
-(https://github.com/python/cpython/blob/3.6/Lib/heapq.py)
+(https://github.com/python/cpython/blob/3.6/Lib/bisect.py)
 
 Assume the item length is X, there would be only n errors, and in every error trace the list item length is K
 ### Time complex

@@ -8,7 +8,7 @@ class FailureCollection(object):
     '''
     The error structure:
     -----------------------------------------------
-    | trace_id(key) | heap_queue of details erorr
+    | trace_id(key) | sorted list of details erorr
     -----------------------------------------------
     The heap queue is sorted with timestamp
     '''
