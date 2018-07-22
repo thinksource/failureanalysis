@@ -1,0 +1,106 @@
+[
+    {
+        "time":"2018-07-20T04:27:22+10:00",
+        "level":"debug",
+        "msg":"checking permission for 4e55fe7b-82eb-4d84-a40b-aeba2f7b2b2c",
+        "app":"svc-app1",
+        "component":"auth.Authoriser.Enforce()",
+        "env":"prod",
+        "span_id":"d732286e-d857-4cb3-9d89-cf7cf3f5f4ed",
+        "trace_id":"e261afb3-584f-41d9-92de-bea1c5a15e8c"
+    },
+    {
+        "time":"2018-07-21T07:47:48+10:00",
+        "level":"debug",
+        "msg":"requesting user profile for4e55fe7b-82eb-4d84-a40b-aeba2f7b2b2c",
+        "app":"svc-app1",
+        "component":"auth.user.Load()",
+        "env":"prod",
+        "span_id":"d732286e-d857-4cb3-9d89-cf7cf3f5f4ed",
+        "trace_id":"e261afb3-584f-41d9-92de-bea1c5a15e8c"
+    },
+    {
+        "time":"2018-07-22T03:39:32+10:00",
+        "level":"debug",
+        "msg":"retrieving user profile for4e55fe7b-82eb-4d84-a40b-aeba2f7b2b2c",
+        "app":"svc-app2",
+        "component":"userRepo.Fetch()",
+        "env":"prod",
+        "span_id":"2acf4395-2c98-468d-ba8d-96fe9484253a",
+        "trace_id":"e261afb3-584f-41d9-92de-bea1c5a15e8c"
+    },
+    {
+        "time":"2018-07-22T04:32:53+10:00",
+        "level":"debug",
+        "msg":"retrieved user profile for4e55fe7b-82eb-4d84-a40b-aeba2f7b2b2c",
+        "app":"svc-app2",
+        "component":"userRepo.Fetch()",
+        "response":200,
+        "env":"prod",
+        "span_id":"2acf4395-2c98-468d-ba8d-96fe9484253a",
+        "trace_id":"e261afb3-584f-41d9-92de-bea1c5a15e8c"
+    },
+    {
+        "time":"2018-07-23T02:14:18+10:00",
+        "level":"debug",
+        "msg":"fetch user profile successfulfor4e55fe7b-82eb-4d84-a40b-aeba2f7b2b2c",
+        "app":"svc-app1",
+        "component":"auth.user.Load()",
+        "response":200,
+        "env":"prod",
+        "span_id":"d732286e-d857-4cb3-9d89-cf7cf3f5f4ed",
+        "trace_id":"e261afb3-584f-41d9-92de-bea1c5a15e8c"
+    }, 
+    {
+        "time":"2018-07-20T11:08:02+10:00",
+        "level":"debug",
+        "msg":"checking permission for 8ee3de84-4acc-4619-bbb1-3e01bc15579d",
+        "app":"svc-app1",
+        "component":"auth.Authoriser.Enforce()",
+        "env":"prod",
+        "span_id":"deeb4ebd-f1c1-408e-b236-894e488477fb",
+        "trace_id":"933ecf49-705f-4903-a2d3-913316fd7010"
+    },
+    {
+        "time":"2018-07-20T23:03:48+10:00",
+        "level":"debug",
+        "msg":"requesting user profile for 8ee3de84-4acc-4619-bbb1-3e01bc15579d",
+        "app":"svc-app1",
+        "component":"auth.user.Load()",
+        "env":"prod",
+        "span_id":"deeb4ebd-f1c1-408e-b236-894e488477fb",
+        "trace_id":"933ecf49-705f-4903-a2d3-913316fd7010"
+    },
+    {
+        "time":"2018-07-21T10:12:24+10:00",
+        "level":"debug",
+        "msg":"retrieving user profile for 8ee3de84-4acc-4619-bbb1-3e01bc15579d",
+        "app":"svc-app2",
+        "component":"userRepo.Fetch()",
+        "env":"prod",
+        "span_id":"d0d8fcaf-f2be-4cc3-91a4-3840c05fd361",
+        "trace_id":"933ecf49-705f-4903-a2d3-913316fd7010"
+    },
+    {
+        "time":"2018-07-22T00:18:43+10:00",
+        "level":"debug",
+        "msg":"unable to retrieve user profile: host 145.222.50.173 not reachable",
+        "app":"svc-app2",
+        "component":"userRepo.Fetch()",
+        "response":500,
+        "env":"prod",
+        "span_id":"d0d8fcaff2be-4cc3-91a4-3840c05fd361",
+        "trace_id":"933ecf49-705f-4903-a2d3-913316fd7010"
+    },
+    {
+        "time":"2018-07-23T02:26:55+10:00",
+        "level":"debug",
+        "msg":"fetch user profile failed; downstream unavailable",
+        "app":"svc-app1",
+        "component":"auth.user.Load()",
+        "response":500,
+        "env":"prod",
+        "span_id":"deeb4ebd-f1c1-408e-b236-894e488477fb",
+        "trace_id":"933ecf49-705f-4903-a2d3-913316fd7010"
+    } 
+]

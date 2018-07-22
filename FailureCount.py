@@ -3,7 +3,7 @@ import heapq as hq
 from dateutil import parser
 
 
-class ErrorCollection(object):
+class FailureCollection(object):
     '''
     The error structure:
     -----------------------------------------------
@@ -24,7 +24,9 @@ class ErrorCollection(object):
                     self.errors[d["trace_id"]] = []
                 dtime=parser.parse(d['time'])
                 # heaq is ordered so after heap push it will keep order by dtime
-                hq.heappush(self.errors[d["trace_id"]],(dtime, d['msg'],d['component']))
+                # (time, msg, component) is the structure for store every error
+                # the value is of self.errors is the heap queue of stored error structure
+                hq.heappush(self.errors[d["trace_id"]],(dtime, d['msg'], d['component']))
         return self.errors
 
     def get_error_count(self):
