@@ -40,6 +40,7 @@ failure:
 4. every item has component to indicate which module running
 5. if the trace_id is same, it will regard as same error
 6. if the trace_id is the same the later one is cause by the early errors, which means the later error will output at first.
+7. Although, I writing the some failure caused by other failure, but it is not sure for that, just the second error is earlier than the first one.
 
 ## complex analysis
 
